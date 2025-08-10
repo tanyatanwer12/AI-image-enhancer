@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# AI-Image-Enhancer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive React-based web app that leverages the **PicWish API** to enhance image quality, upscale resolution, and improve visual details—delivering real-time before-and-after previews with effortless AI-powered processing.
 
-## Available Scripts
+##  Features
 
-In the project directory, you can run:
+- **AI Image Enhancement**: Seamlessly enhance image clarity, sharpness, and resolution using the PicWish API.
+- **Real-Time Previews**: Instantly compare the original and enhanced images side-by-side.
+- **User-Friendly UI**: Built with React, featuring responsive design and smooth interactions.
+- **Simple Workflow**: Upload an image, trigger enhancement, and receive the improved result.
 
-### `npm start`
+##  Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###  Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js & npm (v14+ recommended) installed on your machine.
+- A valid **PicWish API key** (obtainable from PicWish documentation or developer portal).
 
-### `npm test`
+###  Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Clone the repository
+git clone https://github.com/tanyatanwer12/AI-image-enhancer.git
+cd AI-image-enhancer
 
-### `npm run build`
+# Install dependencies
+npm install
+````
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Configuration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Create a `.env` file in the project root and add:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```env
+REACT_APP_PICWISH_API_KEY=your_picwish_api_key_here
+```
 
-### `npm run eject`
+Ensure you're referencing this environment variable securely in your code.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the App
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The app will run at [http://localhost:3000](http://localhost:3000). Upload an image to see AI enhancements in action.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Build for Production
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This creates an optimized production build in the `build/` directory.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+* `public/` — Static assets and HTML template.
+* `src/` — Main React source code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  * `components/` — UI components (upload button, preview panels, etc.).
+  * `utils/` — API interaction logic and helpers (e.g., PicWish integration).
+* Configuration files: `package.json`, `tailwind.config.js`, `postcss.config.js`.
 
-### Analyzing the Bundle Size
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* **React** (via Create React App) — Frontend UI framework.
+* **PicWish API** — AI-powered image enhancement backend.
+* **Tailwind CSS** — Utility-first styling framework.
+* Environment Setup — `.env` for secure API key access.
 
-### Making a Progressive Web App
+## Usage Workflow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Upload an image using the file input.
+2. The PicWish API processes the image and returns an enhanced version.
+3. The app displays both original and enhanced images side-by-side for easy comparison.
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You’re welcome to contribute! To do so:
 
-### Deployment
+1. Fork the repo.
+2. Create a feature branch (`git checkout -b feature-name`).
+3. Make your improvements and commit.
+4. Push to your branch (`git push origin feature-name`).
+5. Submit a Pull Request. Feedback is appreciated!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
