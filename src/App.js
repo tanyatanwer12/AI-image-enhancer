@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Home from './components/Home'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex flex-col items-center justify-center min-h-screen bg-gray-100 py-8 px-4'>
+      
+      <div className='text-center mb-8'>
+        <h1 className='text-5xl font-bold text-gray-800 mb-2'>AI Image Enhancer</h1>
+        <p className='text-lg text-gray-500'>Upload your image and let AI enhance it in seconds.</p>
+      </div>
+
+
+      <Home/>
+
+
+      <div className='text-sm text-gray-500 mt-6' >
+         
+         Powered by AI and Tanya Tanwer
+      </div>
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
